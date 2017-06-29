@@ -1,0 +1,22 @@
+<!-- Sidebar -->
+<nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+  <ul class="nav sidebar-nav">
+    <li class="sidebar-brand">
+      <a href="#"><span class="bandfont">NB</span>Admin</a>
+    </li>
+    <li><a routerLink="/dashboard"><i class="fa fa-tachometer" aria-hidden="true"></i>Dashboard</a></li>
+    <li><a routerLink="/finance"><i class="fa fa-money" aria-hidden="true"></i>Finance</a></li>
+    <li><a routerLink="/news"><i class="fa fa-newspaper-o" aria-hidden="true"></i>News</a></li>
+    <li><a routerLink="/blog"><i class="fa fa-book" aria-hidden="true"></i>Blog</a></li>
+    <li class="dropdown">
+      <a routerLink="/map/googlemap" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-map" aria-hidden="true"></i>Map<span class="caret pull-right"></span></a>
+      <ul class="dropdown-menu" role="menu">
+        <li><a routerLink="/map/googlemap">Google Map</a></li>
+        <li><a routerLink="/map/baidumap">Baidu Map</a></li>
+      </ul>
+    </li>
+    <li><a routerLink="/calendar"><i class="fa fa-calendar" aria-hidden="true"></i>Calendar</a></li>
+    <li><a routerLink="/setting"><i class="fa fa-cog" aria-hidden="true"></i>Setting</a></li>
+  </ul>
+</nav>
+<!-- /#sidebar-wrapper -->
