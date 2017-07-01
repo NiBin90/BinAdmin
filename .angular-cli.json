@@ -20,10 +20,13 @@
       "styles": [
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
         "../node_modules/fullcalendar/dist/fullcalendar.css",
+        "../node_modules/fullcalendar/dist/fullcalendar.print.css",
         "styles.css"
       ],
       "scripts": [
-        "../node_modules/bootstrap/dist/js/bootstrap.min.js"
+        "../node_modules/bootstrap/dist/js/bootstrap.min.js",
+        "../node_modules/moment/min/moment.min.js",
+        "../node_modules/fullcalendar/dist/fullcalendar.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
