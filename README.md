@@ -3,6 +3,10 @@ NBAdmin, short for NIBINAdmin, is a admin platform for myself. It's based on Ang
 
 This application is on the way... come in soon!
 
+<div align="center">
+<img src="https://nibin90.github.io/assets/img/project/carousel/NBAdmin-0.jpg" alt="pic" align=center />
+</div>
+
 > ##### TODO
 > - calendar (with todos)
 > - finance markets (stock)
