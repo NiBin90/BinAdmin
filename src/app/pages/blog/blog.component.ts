@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+declare var CKEDITOR:any;
 @Component({
   selector: 'blog',
   templateUrl: './blog.component.html',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    
+   }
 
   ngOnInit() {
+    CKEDITOR.replace( 'editor1', { height: '500px', width: '100%' } );
   }
 
 }
