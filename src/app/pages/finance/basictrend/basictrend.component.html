@@ -1,0 +1,31 @@
+<!--SEARCH Area-->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-offset-1 col-lg-10">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Enter Symbol, like 'sz000001'" (input)="onUpdateStockId($event)">
+        <span class="input-group-btn">
+      <button class="btn btn-secondary" (click)="ongetStockData()">SEARCH</button>
+      </span>
+      </div>
+    </div>
+  </div>
+</div>
+<!--上证指数日k线和分时线-->
+<div class="row">
+  <div class="SSECI">
+    <h4>The SSE Composite Index</h4>
+  </div>
+  <div class="daily_k_line col-lg-6">
+    <img src="http://image.sinajs.cn/newchart/daily/n/sh000011.gif" alt="daily_k_line">
+  </div>
+  <div class="daily_realtime col-lg-6">
+    <img src="http://image.sinajs.cn/newchart/min/n/sh000001.gif" alt="daily_k_line">
+  </div>
+   <div class="SSECI" *ngIf="show">
+    <h4>{{stockName}}</h4>
+    <div class="daily_k_line col-lg-6">
+    <img src="http://image.sinajs.cn/newchart/daily/n/"+{{stockId}}+".gif" alt="daily_k_line">
+  </div>
+  </div>
+</div>

@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FinanceComponent implements OnInit {
 
-  constructor() { }
+  options: Object;
+  stockId: string = '';
+  constructor() {
+  }
 
   ngOnInit() {
   }

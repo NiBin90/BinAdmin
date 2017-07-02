@@ -1,0 +1,17 @@
+<!--SEARCH Area-->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-offset-1 col-lg-10">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Enter Symbol, like 'sz000001'" (input)="onUpdateStockId($event)">
+        <span class="input-group-btn">
+      <button class="btn btn-secondary" (click)="ongetStockData()">SEARCH</button>
+      </span>
+      </div>
+    </div>
+  </div>
+</div>
+<!--High Chart-->
+<div class="container-fluid">
+  <chart [options]="options"></chart>
+</div>
