@@ -6,6 +6,7 @@ import { appRoutes } from './app.routes';
 import { FormsModule } from '@angular/forms';
 
 import { ChartModule } from 'angular2-highcharts';
+import { HighchartsStatic } from 'angular2-highcharts/dist/HighchartsService';
 
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -24,6 +25,12 @@ import { RealtimequoteComponent } from './pages/finance/realtimequote/realtimequ
 import { BasictrendComponent } from './pages/finance/basictrend/basictrend.component';
 import { ContenttopComponent } from './pages/contenttop/contenttop.component';
 declare var require: any;
+export function highchartsFactory() {
+const hc = require('highcharts/highstock');
+const dd = require('highcharts/modules/exporting');
+dd(hc);
+return hc;
+}
 
 @NgModule({
   declarations: [
@@ -49,9 +56,14 @@ declare var require: any;
     HttpModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
-    ChartModule.forRoot(require('highcharts'))
+    ChartModule
   ],
-  providers: [],
+  providers: [
+     {
+      provide: HighchartsStatic,
+      useFactory: highchartsFactory
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
